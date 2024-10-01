@@ -34,7 +34,7 @@ if ((isset($_POST['enviar']))) {
         $mail->CharSet = 'UTF-8'; //manter formatação de acentos
         $mail->setFrom('contato@tnetsistemas.com.br', 'TNET Sistemas'); // de qual email esta enviando, usar o mesmo que o Username
 
-        $mail->addAddress('contato@tnetsistemas.com.br', 'TNET Sistemas');     //Adicionar um destinatário
+        $mail->addAddress('tnettecnologia@gmail.com', 'TNET Sistemas');     //Adicionar um destinatário
         $mail->addReplyTo($email, $nome);
         // $mail->addCC('cc@example.com');   //copiar parar outros email vejam 
         // $mail->addBCC('bcc@example.com'); //copiar oculta parar outros email 

@@ -69,21 +69,14 @@ if (
 
     try {
         // Server settings
-        $mail->SMTPDebug =  false; //SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+        $mail->SMTPDebug = false; //SMTP::DEBUG_SERVER;                     //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'mail.tnetsistemas.com.br';                     //Set the SMTP server to send through
+        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'contato@tnetsistemas.com.br';                     //SMTP username
-        $mail->Password   = 'K6mUA77VZgf4Gk';                               //SMTP password
+        $mail->Username   = 'tnettecnologia@gmail.com';                     //SMTP username
+        $mail->Password   = 'yfwhvycnsugbkxpn';   //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
-        $mail->Port       = 587; //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-        // $mail->SMTPOptions = array( // add parar erro de certificado SSL do servidor SMTP
-        //     'ssl' => array(
-        //         'verify_peer' => false,
-        //         'verify_peer_name' => false,
-        //         'allow_self_signed' => true
-        //     )
-        // );
+        $mail->Port       = 465;
 
         // Informações do formulário
         $nome = $_POST['nome'];
@@ -95,7 +88,7 @@ if (
         // Recipients
         $mail->setFrom('contato@tnetsistemas.com.br', 'Tnet Sistemas'); // De qual email esta enviando, usar o mesmo que o Username
 
-        $mail->addAddress('contato@tnetsistemas.com.br', 'Tnet Sistemas');     // Adicionar um destinatário
+        $mail->addAddress('tnettecnologia@gmail.com', 'Tnet Sistemas');     // Adicionar um destinatário
         $mail->addReplyTo($replyto, $nome);
 
         $corpo_mensagem = "
