@@ -1,0 +1,17 @@
+{
+    "name": "luan/site_tnet",
+    "autoload": {
+        "psr-4": {
+            "Luan\\SiteTnet\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "luan",
+            "email": "luanmarcosfgns@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
