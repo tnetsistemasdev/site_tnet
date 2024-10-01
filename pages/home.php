@@ -7,7 +7,7 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="6000">
-            <a href="<?php echo INCLUDE_PATH; ?>multiatendimento">
+            <a href="/multiatendimento">
                 <!-- <img class="img3" src="./assets/img/mobile1.png" class="d-block w-100" alt="...">
                 <img class="img2" src="./assets/img/tablet1.png" class="d-block w-100" alt="..."> -->
                 <img src="./assets/img/slide/1-desktop.png" class="d-block w-100" alt="...">
@@ -15,7 +15,7 @@
             </a>
         </div>
         <div class="carousel-item" data-bs-interval="7000">
-            <a href="<?php echo INCLUDE_PATH; ?>tnetemissor">
+            <a href="/tnetemissor">
                 <!-- <img class="img3" src="./assets/img/mobile2.png" class="d-block w-100" alt="...">
                 <img class="img2" src="./assets/img/tablet2.png" class="d-block w-100" alt="..."> -->
                 <img src="./assets/img/slide/2-desktop.png" class="d-block w-100" alt="...">
@@ -23,7 +23,7 @@
             </a>
         </div>
         <div class="carousel-item" data-bs-interval="6000">
-            <a href="<?php echo INCLUDE_PATH; ?>spc-tnet-sistemas">
+            <a href="/spc-tnet-sistemas">
                 <!-- <img class="img3" src="./assets/img/mobile3.png" class="d-block w-100" alt="...">
                 <img class="img2" src="./assets/img/tablet3.png" class="d-block w-100" alt="..."> -->
                 <img src="./assets/img/slide/3-desktop.png" class="d-block w-100" alt="...">
@@ -60,13 +60,13 @@
                     <li class="item"> Multi Filial</li>
                     <li class="item"> Totalmente Online</li>
                     <li style="list-style-type: none !important;">
-                        <a class="teste" href="<?php echo INCLUDE_PATH; ?>tnetemissor">Experimente</a>
+                        <a class="teste" href="/tnetemissor">Experimente</a>
                     </li>
                 </ul>
             </div>
             <!-- <div class="col-md-6 " data-aos="fade-up" data-aos-delay="100">
-                <img id="image-lateral" src="<?php echo INCLUDE_PATH; ?>/assets/img/testesteste.png" alt=""><br>
-                <a class="teste" href="<?php echo INCLUDE_PATH; ?>tnetemissor"> ✓ Experimente</a>
+                <img id="image-lateral" src="/assets/img/testesteste.png" alt=""><br>
+                <a class="teste" href="/tnetemissor"> ✓ Experimente</a>
             </div> -->
         </div>
 </section>
@@ -81,7 +81,7 @@
                     contato agora mesmo e descubra como podemos ajudá-lo a chegar lá!</p>
             </div>
             <div class="col-lg-3 cta-btn-container text-center">
-                <a class="cta-btn align-middle" href="<?php echo INCLUDE_PATH; ?>contato">Entre em contato</a>
+                <a class="cta-btn align-middle" href="/contato">Entre em contato</a>
             </div>
         </div>
 
@@ -150,7 +150,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <h4>Seja nosso Revendedor!</h4>
-                    <form action="<?php echo INCLUDE_PATH; ?>homeenv" method="post">
+                    <form action="/pages/homeenv.php" method="post">
                         <div class="row">
                             <div class="col mb-3">
                                 <!-- <label class="text-parceiro">Seu nome:</label><br> -->

@@ -24,7 +24,7 @@
                     <p style="font-size: 18px"> Entre em contato conosco agora mesmo e descubra como a TNET pode fazer a diferença para você!"</p>
                 </div>
                 <div class="col-md-6">
-                    <img style="width: 100%" src="<?php echo INCLUDE_PATH; ?>/assets/img/empreendedor.png" alt="">
+                    <img style="width: 100%" src="/assets/img/empreendedor.png" alt="">
                 </div>
             </div>
             <h5 class="escolha">ESCOLHA O MELHOR PLANO</h5>

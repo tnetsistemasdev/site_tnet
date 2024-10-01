@@ -1,11 +1,14 @@
 <?php
 
+require '../vendor/autoload.php';
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 // Load Composer's autoloader
-require 'vendor/autoload.php';
+
+
 
 $enviado = false;
 
@@ -75,7 +78,7 @@ if (
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
         $mail->Username   = 'tnettecnologia@gmail.com';                     //SMTP username
         $mail->Password   = 'yfwhvycnsugbkxpn';   //SMTP password
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit SSL encryption
         $mail->Port       = 465;
 
         // Informações do formulário
@@ -108,18 +111,11 @@ if (
         $mail->AltBody = $corpo_mensagem; // Quando o aparelho do cliente não é compatível com HTML (somente texto)
 
         $mail->send();
-        echo '
-        <div class="container mt-5 mb-5">
-            <div class="mt-5 mb-5">
-                <div class="alert alert-success mt-5">
-                    Mensagem enviada
-                </div>
-            </div>
-            <a class="btn btn-primary" href="index.php">Voltar</a>
-        </div>';
+     include('formulario-enviado.php');
     } catch (Exception $e) {
-        echo "A mensagem não pôde ser enviada: {$mail->ErrorInfo}";
+        $message =  "A mensagem não pôde ser enviada: {$mail->ErrorInfo}";
+        include('formulario-nao-enviado.php');
     }
 } else {
-    echo 'Erro ao enviar e-mail, acesso não foi via formulário.';
+    include('formulario-nao-enviado.php');
 }

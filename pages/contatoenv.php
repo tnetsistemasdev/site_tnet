@@ -21,7 +21,7 @@ if ((isset($_POST['enviar']))) {
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
         $mail->Username   = 'tnettecnologia@gmail.com';                     //SMTP username
         $mail->Password   = 'yfwhvycnsugbkxpn';   //SMTP password
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
         $mail->Port       = 465;
 
         //informações do formulário
@@ -60,21 +60,11 @@ if ((isset($_POST['enviar']))) {
         $mail->Body    = $corpo_mensagem;
         $mail->AltBody = $corpo_mensagem; // quando o aparelho do cliente não é compativel com html ( somente text)
         $mail->send();
-
-        echo '<div style="heigth: 500px;" class="container mt-5 mb-5">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        
-        <h1 class="btn btn-success">Mensagem enviada</h1>
-         <br>
-         <a class="btn btn-danger" href="/">Voltar</a>
-         </div>';
+        include('formulario-enviado.php');
     } catch (Exception $e) {
-        echo "A mensagem não pôde ser enviada: {$mail->ErrorInfo}";
+        $message =  "A mensagem não pôde ser enviada: {$mail->ErrorInfo}";
+        include('formulario-nao-enviado.php');
     }
 } else {
-    echo 'Erro ao enviar e-mail, acesso não foi via formulário.';
+    include('formulario-nao-enviado.php');
 }

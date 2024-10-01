@@ -25,7 +25,7 @@
                     <br>
                 </div>
                 <div class="col-md-6">
-                    <img width="700" src="<?php echo INCLUDE_PATH; ?>/assets/img/multiatendimento.png" alt="">
+                    <img width="700" src="/assets/img/multiatendimento.png" alt="">
                 </div>
             </div>
 

@@ -35,7 +35,7 @@
                     </a>
                 </div>
                 <div class="col-md-6">
-                    <img src="<?php echo INCLUDE_PATH; ?>/assets/img/detetive.png" alt="Investigar">
+                    <img src="/assets/img/detetive.png" alt="Investigar">
                 </div>
             </div>
         </div>

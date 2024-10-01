@@ -174,7 +174,7 @@
   <p class="wrong-para">Uh Oh! Essa página não existe!
     <br>
     <br>
-    <a class="btn btn-primary" href="<?php echo INCLUDE_PATH; ?>">Página inicial</a>
+    <a class="btn btn-primary" href="/">Página inicial</a>
   </p>
 
 </div>

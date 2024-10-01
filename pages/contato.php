@@ -34,7 +34,7 @@
 
              <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="100">
 
-                 <form action="<?php echo INCLUDE_PATH; ?>contatoenv" method="post" onsubmit="return validarPost()" role="form" class="php-email-form">
+                 <form action="/contatoenv" method="post" onsubmit="return validarPost()" role="form" class="php-email-form">
                      <div class="row">
                          <div class="col-md-6 form-group">
                              <input type="text" name="nome" class="form-control" id="name" placeholder="Seu nome" required>

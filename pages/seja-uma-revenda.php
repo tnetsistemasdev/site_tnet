@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-lg-6">
           <h3>Seja nosso Revendedor!</h3>
-          <form action="<?php echo INCLUDE_PATH; ?>homeenv" method="post">
+          <form action="/homeenv" method="post">
             <div class="row">
               <div class="col mb-3">
                 <!-- <label class="text-parceiro">Seu nome:</label><br> -->

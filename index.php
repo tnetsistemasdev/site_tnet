@@ -1,4 +1,8 @@
-<?php include('config.php'); ?>
+<?php
+
+include('config.php');
+?>
+
 
 <!doctype html>
 <html lang="pt">
@@ -87,26 +91,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-            <a href="<?php echo INCLUDE_PATH; ?>">
+            <a href="/">
                 <img style="width: 100%!important;" src="./assets/img/logoneww.png" alt="">
             </a>
 
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="<?php echo INCLUDE_PATH; ?>">Inicio</a></li>
+                    <li><a class="nav-link scrollto active" href="/">Inicio</a></li>
                     <li class="dropdown"><a href="#"><span>Nossos produtos</span> <i class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="<?php echo INCLUDE_PATH; ?>cerebro">TNET Cérebro </a></li>
-                            <li><a href="<?php echo INCLUDE_PATH; ?>multiatendimento">TNET Multiatendimento</a></li>
-                            <li><a href="<?php echo INCLUDE_PATH; ?>tnetemissor">TNET Gestor</a></li>
-                            <li><a href="<?php echo INCLUDE_PATH; ?>spc-tnet-sistemas">TNET SPC Sistemas </a></li>
+                            <li><a href="/cerebro">TNET Cérebro </a></li>
+                            <li><a href="/multiatendimento">TNET Multiatendimento</a></li>
+                            <li><a href="/tnetemissor">TNET Gestor</a></li>
+                            <li><a href="/spc-tnet-sistemas">TNET SPC Sistemas </a></li>
                         </ul>
                     </li>
-                    <li><a class="nav-link scrollto" href="<?php echo INCLUDE_PATH; ?>quem-somos">Quem somos</a></li>
-                    <li><a class="nav-link scrollto" href="<?php echo INCLUDE_PATH; ?>faq">Perguntas frequentes</a></li>
-                    <li><a class="nav-link scrollto" href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
-                    <li><a class="nav-link scrollto" href="<?php echo INCLUDE_PATH; ?>seja-uma-revenda">Seja nosso Revendedor</a></li>
+                    <li><a class="nav-link scrollto" href="/quem-somos">Quem somos</a></li>
+                    <li><a class="nav-link scrollto" href="/faq">Perguntas frequentes</a></li>
+                    <li><a class="nav-link scrollto" href="/contato">Contato</a></li>
+                    <li><a class="nav-link scrollto" href="/seja-uma-revenda">Seja nosso Revendedor</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -116,8 +120,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <main id="main">
         <?php
-        $url = isset($_GET['url']) ? $_GET['url'] : 'home';
-        if (file_exists('pages/' . $url . '.php')) {
+        $url = $_SERVER['REQUEST_URI'];
+        if(empty($url)|| $url==='/') $url = 'home';
+
+        if (file_exists('./pages/' . $url . '.php')) {
             include('pages/' . $url . '.php');
         } else {
             //caso de erro ou a pagina não exista
@@ -148,23 +154,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Nossos produtos</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo INCLUDE_PATH; ?>multiatendimento">TNET
+                            <li><i class="bx bx-chevron-right"></i> <a href="/multiatendimento">TNET
                                     Multiatendimento</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo INCLUDE_PATH; ?>tnetemissor">TNET Gestor</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo INCLUDE_PATH; ?>spc-tnet-sistemas">TNET
+                            <li><i class="bx bx-chevron-right"></i> <a href="/tnetemissor">TNET Gestor</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/spc-tnet-sistemas">TNET
                                     SPC Sistemas</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo INCLUDE_PATH; ?>certificado">Certificado Digital</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo INCLUDE_PATH; ?>cerebro">Cerebro</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/certificado">Certificado Digital</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/cerebro">Cerebro</a></li>
                         </ul>
                     </div>
 
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Sobre</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo INCLUDE_PATH; ?>quem-somos">Quem somos</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo INCLUDE_PATH; ?>faq">Perguntas frequentes</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="<?php echo INCLUDE_PATH; ?>termos">Termos de uso</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/quem-somos">Quem somos</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/faq">Perguntas frequentes</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/contato">Contato</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/termos">Termos de uso</a></li>
                             <li><i class="bx bx-chevron-right"></i> <a href="https://www.fundacaoti.com.br/politica-de-privacidade">Política de Privacidade</a></li>
                         </ul>
                     </div>
