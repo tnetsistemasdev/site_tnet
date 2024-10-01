@@ -17,12 +17,12 @@ if ((isset($_POST['enviar']))) {
         //Server settings
         $mail->SMTPDebug = false; //SMTP::DEBUG_SERVER;                     //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'mail.tnetsistemas.com.br';                     //Set the SMTP server to send through
+        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'contato@tnetsistemas.com.br';                     //SMTP username
-        $mail->Password   = 'K6mUA77VZgf4Gk';   //SMTP password
+        $mail->Username   = 'tnettecnologia@gmail.com';                     //SMTP username
+        $mail->Password   = 'yfwhvycnsugbkxpn';   //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
-        $mail->Port       = 587;
+        $mail->Port       = 465;
 
         //informações do formulário
         $nome = $_POST['nome'];
